@@ -38,7 +38,7 @@ class YoFlowTests {
     fun flowWorksCorrectly() {
         val yo = YoState(a.info.legalIdentities.first(), b.info.legalIdentities.first())
         val flow = YoFlow(b.info.legalIdentities.first())
-        val future = a.services.startFlow(flow)
+        val future = a.startFlow(flow)
         network.runNetwork()
         val stx = future.getOrThrow()
         // Check yo transaction is stored in the storage service.
@@ -46,7 +46,7 @@ class YoFlowTests {
         assertEquals(bTx, stx)
         print("bTx == $stx\n")
         // Check yo state is stored in the vault.
-        b.services.database.transaction {
+        b.transaction {
             // Simple query.
             val bYo = b.services.vaultService.queryBy<YoState>().states.single().state.data
             assertEquals(bYo.toString(), yo.toString())
