@@ -19,7 +19,7 @@ You will need the following installed on your machine before you can start:
 
 To get started, clone this repository with:
 
-     git clone https://github.com/roger3cev/yo-cordapp.git
+     git clone https://github.com/corda/yo-cordapp
 
 And change directories to the newly cloned repo:
 
