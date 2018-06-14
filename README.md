@@ -78,7 +78,7 @@ terminal window or in the `build.gradle` file.
 Sending a Yo! from Party A to Party B (we use Party B's X500 organisation. You do not need to use the whole X500 name,
 using only the organisation works. In this case: PartyA, PartyB, Controller, etc.):
 
-    http://localhost:10007/api/yo/yo?target=O=PartyB
+    http://localhost:10007/api/yo/yo?target=PartyB
 
 Showing all of Party B's Yo's!:
 
