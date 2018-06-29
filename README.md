@@ -2,8 +2,6 @@
 
 # Yo! CorDapp
 
-**NOTE:** This CorDapp targets Corda v2.0.
-
 Send Yo's! to all your friends running Corda nodes!
 
 ## Pre-Requisites
