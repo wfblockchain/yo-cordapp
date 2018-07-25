@@ -11,6 +11,7 @@ import net.corda.core.messaging.CordaRPCOps
 import net.corda.core.schemas.MappedSchema
 import net.corda.core.schemas.PersistentState
 import net.corda.core.schemas.QueryableState
+import net.corda.core.serialization.CordaSerializable
 import net.corda.core.transactions.LedgerTransaction
 import net.corda.core.transactions.SignedTransaction
 import net.corda.core.transactions.TransactionBuilder
@@ -132,6 +133,7 @@ class YoContract: Contract {
 }
 
 // State.
+@CordaSerializable
 data class YoState(val origin: Party,
                  val target: Party,
                  val yo: String = "Yo!") : ContractState, QueryableState {
